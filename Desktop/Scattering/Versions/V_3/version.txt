@@ -1,0 +1,1 @@
+En esta versión las rejillas oficialmente sensibles ante los ojos de Geant4, internamente ya "sienten" las partículas, pero todavía no se llenan datos

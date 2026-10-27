@@ -1,0 +1,1 @@
+En esta versión he añadido el cubo al centro del universo, este tiene la opción de poner varios materiales construidos del cubo. He añadido propiedades de decaimiento a las partículas.

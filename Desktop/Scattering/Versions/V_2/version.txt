@@ -1,0 +1,1 @@
+En esta versión he añadido las rejillas tanto arriba como abajo del material, del cubo, para ver donde entra, en que cuadro de rejilla, la partícula y cuando sale luego de pasar por el cubo de material
