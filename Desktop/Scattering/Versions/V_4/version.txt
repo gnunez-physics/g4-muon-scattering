@@ -1,0 +1,1 @@
+En esta versión se añadio la capacidad de rellenar los datos root de las placas, además añadí dos sensores, uno arriba y otro abajo. Además de hacer scripts para analizar datos, y rehacer los rayos de los muones que pasan por el oro 
