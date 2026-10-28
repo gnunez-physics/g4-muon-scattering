@@ -1,0 +1,66 @@
+# Silenciar la salida en terminal
+/control/verbose 0
+/run/verbose 0
+/event/verbose 0
+/tracking/verbose 0
+/vis/verbose errors
+
+/run/numberOfThreads 5
+
+
+# =========================================================================
+# INICIALIZACIÓN DE LA SIMULACIÓN
+# =========================================================================
+# Prepara y procesa toda la geometría y la física para dejar listo el entorno.
+/run/initialize
+
+
+# =========================================================================
+# CONFIGURACIÓN DE LA VENTANA GRÁFICA
+# =========================================================================
+# Abre una ventana visualizadora utilizando el driver OpenGL (OGL) 
+# con una resolución de 600x600 píxeles.
+/vis/open OGL 600x600-0+0
+
+
+# =========================================================================
+# PERSPECTIVA Y ORIENTACIÓN DE LA CÁMARA
+# =========================================================================
+# Define el punto de vista inicial desde el que observaremos el detector (vector 1, 1, 1).
+/vis/viewer/set/viewpointVector 1 1 1
+
+# Establece qué dirección se considera "hacia arriba" en la pantalla (eje Z positivo).
+/vis/viewer/set/upVector 0 0 1
+
+# Activa la actualización automática de la pantalla cada vez que ocurra un cambio.
+/vis/viewer/set/autoRefresh true
+
+
+# =========================================================================
+# DIBUJO Y RENDERIZADO DE LA ESCENA
+# =========================================================================
+# Dibuja en la pantalla todos los volúmenes geométricos que programaste.
+/vis/drawVolume
+
+
+# =========================================================================
+# CONFIGURACIÓN DE TRAYECTORIAS Y EVENTOS
+# =========================================================================
+# Dibuja de forma suave y continua las líneas de recorrido de las partículas.
+/vis/scene/add/trajectories smooth
+
+# Configura la escena para que, si simulas muchas partículas, las trayectorias 
+# se acumulen en pantalla en lugar de borrarse en cada disparo.
+/vis/scene/endOfEventAction accumulate
+
+
+# =========================================================================
+# ELEMENTOS DE REFERENCIA ESPACIAL (AYUDAS VISUALES)
+# =========================================================================
+# Añade una barra de escala visual de 1 metro para medir el tamaño del detector.
+/vis/scene/add/scale 6 m
+
+# Dibuja los ejes de coordenadas (X, Y, Z) para orientarnos en el espacio 3D.
+/vis/scene/add/axes 0 0 0 1 m
+
+
